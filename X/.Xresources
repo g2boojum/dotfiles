@@ -1,0 +1,228 @@
+! $Header: /home/taviso/.Xdefaults,v 1.3 2004/04/20 19:52:21 taviso Exp $
+
+*background: #f6f6f6
+
+DClock*geometry:      175x50-5+5 
+DClock*foreground:      #cdddee 
+DClock*background:      #000020 
+DClock*led_off:         #122144 
+DClock*militaryTime:      true 
+DClock*miltime:         true 
+DClock*scroll:         false 
+DClock*fade:         true 
+DClock*seconds:         false 
+DClock*bell:         false 
+DClock*date:         %A, %d %B 
+DClock*blink:         false 
+DClock*font:         -bitstream-bitstream vera sans-bold-i-*-*-*-80-*-*-*-*-iso8859-1 
+DClock*angle:         5
+
+!Rxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=11
+!Rxvt*loginShell: -ls
+!Rxvt*scrollBar: +sb
+!Rxvt*foreground: white
+!Rxvt*background: black
+
+
+Aterm*colorBD: blue
+Aterm*colorUL: green
+Aterm*loginShell: true
+Aterm*scrollBar: false
+!Aterm*foreground: yellow
+!Aterm*background: #000052
+!Aterm*transparent: true
+!Aterm*tintingType: true
+!Aterm*shading: 90
+!Aterm*tinting: white
+!Aterm*fading: -40
+!Aterm*font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+!Aterm*boldFont: -*-terminus-bold-*-*-*-*-*-*-*-*-*-*-*
+Aterm*font: fixed
+Aterm*saveLines: 1000
+
+!Rxvt*colorBD: blue
+!Rxvt*colorUL: green
+!Rxvt*loginShell: true
+!Rxvt*scrollBar: false
+!Rxvt*foreground: white
+!Rxvt*background: #000052
+!!Rxvt*font: -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
+!!Rxvt*boldFont: -*-terminus-bold-*-*-*-*-*-*-*-*-*-*-
+!Rxvt*saveLines: 1000
+!Rxvt*font: snap
+
+XTerm*charClass: 33:48,37:48,45-47:48,64:48
+XTerm*VT100*background: black
+XTerm*VT100*foreground: white
+XTerm*VT100*faceName: Terminus
+XTerm*VT100*faceSize: 8
+XTerm*loginShell: true
+!XTerm*showBlinkAsBold: true
+
+
+Xcursor.theme: whiteglass
+!Xcursor.theme: gentoo-silver
+Xcursor.size: 24
+
+xosview*title: xosview
+!xosview*captions: False
+!xosview*labels: False
+!xosview*usedlabels: False
+!xosview*borderwidth: 0
+!xosview*font: snap
+!xosview*foreground: black
+!xosview*transparent: True
+!xosview*background: #c6c3c6
+
+!xosview*cpuUserColor: #ffe4b5
+!xosview*cpuNiceColor: #ffe4b5
+!xosview*cpuSystemColor: #ffe4b5
+!xosview*cpuInterruptColor: #ffe4b5
+!xosview*cpuFreeColor: #c6cbd6
+!xosview*cpuDecay: False
+!xosview*cpuGraph: False
+!xosview*cpuPriority: 2
+!
+!xosview*memFreeColor: #c6cbd6
+!xosview*memInactiveColor: #99b0de
+!xosview*memUsedColor: #99b0de
+!xosview*memBufferColor: #c6cbd6
+!xosview*memCacheColor: #c6cbd6
+!xosview*memSharedColor: #99b0de
+!xosview*memTextColor: #99b0de
+!xosview*memOtherColor: #99b0de
+!xosview*memActiveColor: #99b0de
+!xosview*memGraph: False
+!
+!xosview*netBackground: #c6cbd6
+!xosview*netInColor: #b5c7b5
+!xosview*netOutColor: #b5c7b5
+!xosview*netBandwidth: 75000
+!xosview*netDecay: False
+!xosview*netGraph: False
+!
+!xosview*swapFreeColor: #c6cbd6
+!xosview*swapUsedColor: #7ec0ee
+!
+!xosview*diskIdleColor: #c6cbd6
+!xosview*diskReadColor: #b5aeff
+!xosview*diskWriteColor: #b5aeff
+!xosview*diskUsedColor: #b5aeff
+!xosview*diskGraph: False
+!xosview*diskDecay: False
+
+!xosview*battery: False
+!xosview*gfx: False
+!xosview*net: False
+!xosview*page: False
+!xosview*disk: False
+!xosview*interrupts: False
+!xosview*load: False
+!xosview*swap: False
+!xosview*lmstemp: False
+!xosview*cpu: False
+!xosview*mem: False
+
+*beNiceToColormap: False
+!*shapeStyle: Rectangle
+!*Text.borderWidth: 0
+!*SimpleMenu.borderWidth: 0
+!*Paned.internalBorderWidth: 0
+!SmeBSB.shadowWidth:  0
+
+!urxvt*font: fixed
+!urxvt.boldFont: xft:Terminus Bold:pixelsize=12
+!urxvt.inheritPixmap: True
+!urxvt.background: #ffffff
+!urxvt.foreground: #000000
+!urxvt*colorBD: green
+!urxvt.background: #ffffff
+!urxvt.foreground: #000000
+!urxvt.scrollBar: False
+!urxvt.visualBell: False
+!urxvt.internalBorder: 0
+!urxvt.externalBorder: 0
+!urxvt.colorRV: green
+!!urxvt.cursorBlink: True
+urxvt.font: xft:JetBrainsMono-Regular:pixelsize=12
+urxvt.realBold: True
+urxvt.colorRV: green
+!urxvt.background: #000000
+!urxvt.foreground: #ffffff
+urxvt.scrollBar: False
+urxvt.visualBell: False
+urxvt.internalBorder: 3
+urxvt.externalBorder: 0
+urxvt*loginShell: True
+urxvt.tintColor: #333333
+urxvt.saveLines: 10000
+urxvt.perl-ext-common: default,matcher
+urxvt.url-launcher: firefox
+!urxvt.url-launcher: google-chrome-stable
+urxvt.matcher.button: 1
+
+xbiff*flip:false
+xbiff*fullPixmap:mailfull
+xbiff*emptyPixmap:mailempty
+xbiff*fullPixmapMask:mailfullmsk
+xbiff*emptyPixmapMask:mailemptymsk
+xbiff*shapeWindow:true
+
+! solarized colors
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+! Dark
+
+!#define S_base03        #002b36
+!#define S_base02        #073642
+!#define S_base01        #586e75
+!#define S_base00        #657b83
+!#define S_base0         #839496
+!#define S_base1         #93a1a1
+!#define S_base2         #eee8d5
+!#define S_base3         #fdf6e3
+
+
+! Light
+
+#define S_base03        #fdf6e3
+#define S_base02        #eee8d5
+#define S_base01        #93a1a1
+#define S_base00        #839496
+#define S_base0         #657b83
+#define S_base1         #586e75
+#define S_base2         #073642
+#define S_base3         #002b36
+
+URxvt*background:              S_base03
+URxvt*foreground:              S_base0
+!URxvt*fading:                 40
+URxvt*fadeColor:               S_base03
+URxvt*cursorColor:             S_base1
+URxvt*pointerColorBackground:  S_base01
+URxvt*pointerColorForeground:  S_base1
+
+URxvt*color0:                  S_base02
+URxvt*color1:                  S_red
+URxvt*color2:                  S_green
+URxvt*color3:                  S_yellow
+URxvt*color4:                  S_blue
+URxvt*color5:                  S_magenta
+URxvt*color6:                  S_cyan
+URxvt*color7:                  S_base2
+URxvt*color9:                  S_orange
+URxvt*color8:                  S_base03
+URxvt*color10:                 S_base01
+URxvt*color11:                 S_base00
+URxvt*color12:                 S_base0
+URxvt*color13:                 S_violet
+URxvt*color14:                 S_base1
+URxvt*color15:                 S_base3
+

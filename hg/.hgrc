@@ -1,0 +1,10 @@
+# This is a Mercurial configuration file
+
+[ui]
+username = Grant Goodyear <grant.goodyear@corelab.com>
+merge = internal:merge
+
+[extensions]
+record=
+mq=
+
