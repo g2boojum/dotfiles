@@ -48,3 +48,5 @@ export PIP_FORMAT=columns
 
 export PS1='\[\033[01;32m\]\h \[\033[01;34m\]\W > \[\033[00m\]'
 
+# curl SSL stuff
+export CURL_CA_BUNDLE=/home/grant/certs/ca-bundle.crt
