@@ -36,9 +36,9 @@ ISCDATA="/home/grant/RSICC/MCNP/MCNP6.2/MCNP_CODE/MCNP620/Utilities/ISC/data"
 ulimit -s unlimited
 
 # TeXLive stuff
-export PATH="/home/grant/progs/texlive/2019/bin/x86_64-linux:$PATH"
-export INFOPATH="/home/grant/progs/texlive/2019/texmf-dist/doc/info:$INFOPATH"
-export MANPATH="/home/grant/progs/texlive/2019/texmf-dist/doc/man:$MANPATH"
+export PATH="/home/grant/progs/texlive/2020/bin/x86_64-linux:$PATH"
+export INFOPATH="/home/grant/progs/texlive/2020/texmf-dist/doc/info:$INFOPATH"
+export MANPATH="/home/grant/progs/texlive/2020/texmf-dist/doc/man:$MANPATH"
 
 # zotero
 export PATH="$PATH:$HOME/progs/Zotero_linux-x86_64"
@@ -50,3 +50,4 @@ export PS1='\[\033[01;32m\]\h \[\033[01;34m\]\W > \[\033[00m\]'
 
 # curl SSL stuff
 export CURL_CA_BUNDLE=/home/grant/certs/ca-bundle.crt
+ 
