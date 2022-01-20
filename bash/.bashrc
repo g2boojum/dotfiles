@@ -51,3 +51,11 @@ export PS1='\[\033[01;32m\]\h \[\033[01;34m\]\W > \[\033[00m\]'
 # curl SSL stuff
 export CURL_CA_BUNDLE=/home/grant/certs/ca-bundle.crt
  
+# julia
+export PATH="/home/grant/julia/julia-1.7.1/bin:$PATH"
+
+# QMK
+export QMK_HOME="~/qmk_firmware"
+
+#nim
+export PATH="$PATH:$HOME/.nimble/bin:$HOME/nim/nim-1.6.2/bin"
