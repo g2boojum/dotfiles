@@ -59,3 +59,10 @@ export QMK_HOME="~/qmk_firmware"
 
 #nim
 export PATH="$PATH:$HOME/.nimble/bin:$HOME/nim/nim-1.6.2/bin"
+
+#rust
+export PATH="$PATH:$HOME/.cargo/bin"
+
+#go
+export PATH="$HOME/progs/go/bin:$PATH"
+. "$HOME/.cargo/env"
