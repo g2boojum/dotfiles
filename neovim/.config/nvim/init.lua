@@ -173,7 +173,7 @@ vim.opt.formatoptions:remove {'b'} -- don't worry about vi compatiblity
 vim.opt.formatoptions:append {'l'} -- don't break long lines in insert mode
 vim.opt.formatoptions:append {'1'} -- don't break lines after one-letter words, if possible
 vim.opt.shiftround = true -- round indent < and > to multiple of shiftwidth
-vim.opt.shiftwidth = 2    -- overridden by editorconfig etc.
+vim.opt.shiftwidth = 4    -- overridden by editorconfig etc.
 vim.opt.smarttab = true   -- use shiftwidth when inserting <Tab>
 vim.opt.tabstop = 8       -- number of spaces that <Tab> in file uses
 vim.opt.textwidth = 80    -- by default, although plugins or autocmds can modify
