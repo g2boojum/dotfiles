@@ -117,11 +117,72 @@ function M.setup()
 			requires = { "nvim-web-devicons" },
 		}
 
+		-- bufferline
+		use {
+			"akinsho/nvim-bufferline.lua",
+			event = "BufReadPre",
+			wants = "nvim-web-devicons",
+			config = function()
+				require("config.bufferline").setup()
+			end,
+		}
+
+		-- nvim-tree
+		use {
+			"kyazdani42/nvim-tree.lua",
+			requires = { "kyazdani42/nvim-web-devicons", },
+			cmd = { "NvimTreeToggle", "NvimTreeClose" },
+			config = function()
+				require("config.nvimtree").setup()
+			end,
+		}
+
+		-- lightspeed for motions
+		use {
+			"ggandor/lightspeed.nvim",
+		}
+		--
+	  -- coq.nvim for completions
+    use {
+      "ms-jpq/coq_nvim",
+      branch = "coq",
+      event = "InsertEnter",
+      opt = true,
+      run = ":COQdeps",
+      config = function()
+        require("config.coq").setup()
+      end,
+      requires = {
+        { "ms-jpq/coq.artifacts", branch = "artifacts" },
+        { "ms-jpq/coq.thirdparty", branch = "3p", module = "coq_3p" },
+      },
+      disable = false,
+    }
+
+		-- LSP
+		use {
+			"neovim/nvim-lspconfig",
+			opt = true,
+			event = "BufReadPre",
+			wants = { "nvim-lsp-installer", "lsp_signature.nvim", "coq_nvim" },
+			config = function()
+				require("config.lsp").setup()
+			end,
+			requires = {
+				"williamboman/nvim-lsp-installer",
+				"ray-x/lsp_signature.nvim",
+			},
+		}
+
+
+	
+
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
       require("packer").sync()
     end
   end
+
 
   packer_init()
 

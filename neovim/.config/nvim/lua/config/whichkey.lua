@@ -38,6 +38,11 @@ function M.setup()
       u = { "<cmd>PackerUpdate<cr>", "Update" },
     },
 
+		f = {
+			name = "Find",
+			e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+		},
+
     g = {
       name = "Git",
       s = { "<cmd>Neogit<CR>", "Status" },
