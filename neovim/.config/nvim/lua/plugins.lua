@@ -83,7 +83,7 @@ function M.setup()
 		-- IndentLine
 		use {
 			"lukas-reineke/indent-blankline.nvim",
-			config = function() 
+			config = function()
 				require("config.indentblankline").setup()
 			end,
 		}
@@ -127,6 +127,15 @@ function M.setup()
 			end,
 		}
 
+		-- gps
+		use {
+		  "SmiteshP/nvim-gps",
+			config = function()
+			  require("nvim-gps").setup()
+			end,
+		}
+
+
 		-- nvim-tree
 		use {
 			"kyazdani42/nvim-tree.lua",
@@ -141,7 +150,22 @@ function M.setup()
 		use {
 			"ggandor/lightspeed.nvim",
 		}
-		--
+
+		-- nvim-cmp for completions
+		use {
+			"hrsh7th/nvim-cmp",
+			config = function()
+				require("config.cmp").setup()
+			end,
+			requires = {
+				"hrsh7th/cmp-nvim-lsp",
+				"hrsh7th/cmp-buffer",
+				"hrsh7th/cmp-path",
+				"hrsh7th/cmp-cmdline",
+			},
+			disable = false,
+		}
+
 	  -- coq.nvim for completions
     use {
       "ms-jpq/coq_nvim",
@@ -159,23 +183,6 @@ function M.setup()
       disable = true,
     }
 
-		-- -- LSP
-		-- use {
-		-- 	"neovim/nvim-lspconfig",
-		-- 	opt = true,
-		-- 	event = "BufReadPre",
-		-- 	-- wants = { "nvim-lsp-installer", "lsp_signature.nvim", "coq_nvim" },
-		-- 	wants = { "nvim-lsp-installer", "lsp_signature.nvim" },
-		-- 	config = function()
-		-- 		require("config.lsp").setup()
-		-- 	end,
-		-- 	requires = {
-		-- 		"williamboman/nvim-lsp-installer",
-		-- 		"ray-x/lsp_signature.nvim",
-		-- 		-- "folke/lua-dev.nvim",
-		-- 	},
-		-- 	disable = false,
-		-- }
 
 		-- LSP
 		use {
@@ -192,6 +199,32 @@ function M.setup()
 				"folke/lua-dev.nvim",
 			},
 		}
+
+		-- trouble.nvim
+		use {
+			"folke/trouble.nvim",
+			event = "BufReadPre",
+			wants = "nvim-web-devicons",
+			cmd = { "TroubleToggle", "Trouble" },
+			config = function()
+				require("trouble").setup {
+					use_diagnostic_signs = true,
+				}
+			end,
+		}
+
+		-- marks
+		use {
+			"chentau/marks.nvim",
+			config = function()
+				require("config.marks").setup()
+			end,
+		}
+
+		-- my code formatters
+		use { "g2boojum/vim-mcnp" }
+		use { "g2boojum/vim-pweave" }
+		use { "g2boojum/vim-sweave-rst" }
 
 
     if packer_bootstrap then
