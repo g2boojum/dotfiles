@@ -6,9 +6,32 @@ local servers = {
   jsonls = {},
   pyright = {},
   rust_analyzer = {},
-  sumneko_lua = {},
+  sumneko_lua = {
+    settings = {
+      Lua = {
+        runtime = {
+          -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+          version = "LuaJIT",
+          -- Setup your lua path
+          path = vim.split(package.path, ";"),
+        },
+        diagnostics = {
+          -- Get the language server to recognize the `vim` global
+          globals = { "vim" },
+        },
+        workspace = {
+          -- Make the server aware of Neovim runtime files
+          library = {
+            [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+            [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
+          },
+        },
+      },
+		},
+	},
   tsserver = {},
   vimls = {},
+	clangd = {},
 }
 
 local lsp_signature = require "lsp_signature"
@@ -32,11 +55,8 @@ local function on_attach(client, bufnr)
   require("config.lsp.keymaps").setup(client, bufnr)
 end
 
--- local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()) -- for nvim-cmp
-
 local opts = {
   on_attach = on_attach,
-  -- capabilities = capabilities, -- for nvim-cmp
   flags = {
     debounce_text_changes = 150,
   },

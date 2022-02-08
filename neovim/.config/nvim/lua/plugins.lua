@@ -75,7 +75,7 @@ function M.setup()
 		-- WhichKey
 		use {
 			"folke/which-key.nvim",
-			config = function() 
+			config = function()
 				require("config.whichkey").setup()
 			end,
 		}
@@ -156,26 +156,43 @@ function M.setup()
         { "ms-jpq/coq.artifacts", branch = "artifacts" },
         { "ms-jpq/coq.thirdparty", branch = "3p", module = "coq_3p" },
       },
-      disable = false,
+      disable = true,
     }
+
+		-- -- LSP
+		-- use {
+		-- 	"neovim/nvim-lspconfig",
+		-- 	opt = true,
+		-- 	event = "BufReadPre",
+		-- 	-- wants = { "nvim-lsp-installer", "lsp_signature.nvim", "coq_nvim" },
+		-- 	wants = { "nvim-lsp-installer", "lsp_signature.nvim" },
+		-- 	config = function()
+		-- 		require("config.lsp").setup()
+		-- 	end,
+		-- 	requires = {
+		-- 		"williamboman/nvim-lsp-installer",
+		-- 		"ray-x/lsp_signature.nvim",
+		-- 		-- "folke/lua-dev.nvim",
+		-- 	},
+		-- 	disable = false,
+		-- }
 
 		-- LSP
 		use {
 			"neovim/nvim-lspconfig",
 			opt = true,
 			event = "BufReadPre",
-			wants = { "nvim-lsp-installer", "lsp_signature.nvim", "coq_nvim" },
+			wants = { "nvim-lsp-installer", "lsp_signature.nvim", "lua-dev.nvim" },
 			config = function()
 				require("config.lsp").setup()
 			end,
 			requires = {
 				"williamboman/nvim-lsp-installer",
 				"ray-x/lsp_signature.nvim",
+				"folke/lua-dev.nvim",
 			},
 		}
 
-
-	
 
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
