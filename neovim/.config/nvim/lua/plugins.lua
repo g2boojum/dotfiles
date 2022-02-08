@@ -127,15 +127,6 @@ function M.setup()
 			end,
 		}
 
-		-- gps
-		use {
-		  "SmiteshP/nvim-gps",
-			config = function()
-			  require("nvim-gps").setup()
-			end,
-		}
-
-
 		-- nvim-tree
 		use {
 			"kyazdani42/nvim-tree.lua",
