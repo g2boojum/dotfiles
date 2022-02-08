@@ -3,6 +3,11 @@ local M = {}
 function M.setup()
   local gps = require "nvim-gps"
 
+	-- ins_left {
+	-- 	gps.get_location,
+	-- 	cond = gps.is_available,
+	-- }
+
   require("lualine").setup {
     options = {
       icons_enabled = true,

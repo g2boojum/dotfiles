@@ -14,15 +14,28 @@ local function keymappings(client, bufnr)
   keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
   keymap("n", "[e", "<cmd>lua vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.ERROR})<CR>", opts)
   keymap("n", "]e", "<cmd>lua vim.diagnostic.goto_next({severity = vim.diagnostic.severity.ERROR})<CR>", opts)
+	keymap("n", 'gd', ':lua vim.lsp.buf.definition()<cr>', opts)
+	keymap("n", 'gD', ':lua vim.lsp.buf.declaration()<cr>', opts)
+	keymap("n", 'gi', ':lua vim.lsp.buf.implementation()<cr>', opts)
+	keymap("n", 'gw', ':lua vim.lsp.buf.document_symbol()<cr>', opts)
+	keymap("n", 'gw', ':lua vim.lsp.buf.workspace_symbol()<cr>', opts)
+	keymap("n", 'gr', ':lua vim.lsp.buf.references()<cr>', opts)
+	keymap("n", 'gt', ':lua vim.lsp.buf.type_definition()<cr>', opts)
+	keymap("n", 'K', ':lua vim.lsp.buf.hover()<cr>', opts)
+	keymap("n", '<c-k>', ':lua vim.lsp.buf.signature_help()<cr>', opts)
+	keymap("n", '<leader>af', ':lua vim.lsp.buf.code_action()<cr>', opts)
+	keymap("n", '<leader>rn', ':lua vim.lsp.buf.rename()<cr>', opts)
 
   -- Whichkey
   local keymap_l = {
     l = {
       name = "Code",
+			R = { "<cmd>Trouble lsp_references<cr>", "Trouble References" },
       r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
       a = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Action" },
       d = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Line Diagnostics" },
       i = { "<cmd>LspInfo<CR>", "Lsp Info" },
+			t = { "<cmd>TroubleToggle<CR>", "Trouble" },
     },
   }
   if client.resolved_capabilities.document_formatting then
