@@ -39,10 +39,25 @@ function M.setup()
     -- Colorscheme
     use {
       "sainnhe/everforest",
+      -- config = function()
+      --   vim.cmd "colorscheme everforest"
+      -- end,
+    }
+    use { "sainnhe/edge" }
+    use { "marko-cerovac/material.nvim" }
+    use { "ciaranm/inkpot" }
+    use { "folke/tokyonight.nvim" }
+    use { "EdenEast/nightfox.nvim" }
+    use { "projekt0n/github-nvim-theme" }
+    use { "rafamadriz/neon" }
+
+    use {
+      "folke/twilight.nvim",
       config = function()
-        vim.cmd "colorscheme everforest"
+         require("twilight").setup {}
       end,
     }
+
 
 		-- Better comments
 		use {
