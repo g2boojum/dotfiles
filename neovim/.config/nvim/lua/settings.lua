@@ -75,3 +75,36 @@ opt.winwidth = 40
 -- Settings: terminal
 opt.termguicolors = true
 
+-- colorscheme
+--vim.cmd "colorscheme everforest"
+
+--vim.g.material_style = 'lighter'
+--require('material').setup({
+--	contrast = {
+--		sidebars = true,
+--		cursor_line = true,
+--	},
+--	italics = {
+--		comments = true,
+--		functions = true,
+--	},
+--	contrast_filetypes = {
+--		"terminal",
+--		"packer",
+--		"qf",
+--	},
+--	disable = {
+--		borders = true,
+--		eob_lines = true
+--	},
+--	lualine_style = 'stealth'
+--})
+--vim.cmd "colorscheme material"
+
+--vim.g.neon_style = "light"
+--vim.cmd [[colorscheme neon]]
+
+require("github-theme").setup( {
+  theme_style = "light",
+})
+
