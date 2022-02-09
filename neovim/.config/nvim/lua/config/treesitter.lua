@@ -1,5 +1,6 @@
 local M = {}
 
+-- Note: The below folding seems to disable indent-blankline
 -- vim.opt.foldmethod = "expr"
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
