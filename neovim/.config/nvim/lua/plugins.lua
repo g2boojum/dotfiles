@@ -195,7 +195,7 @@ function M.setup()
 			"neovim/nvim-lspconfig",
 			opt = true,
 			event = "BufReadPre",
-			wants = { "nvim-lsp-installer", "lsp_signature.nvim", "lua-dev.nvim" },
+			wants = { "nvim-lsp-installer", "lsp_signature.nvim", "lua-dev.nvim", "null-ls.nvim" },
 			config = function()
 				require("config.lsp").setup()
 			end,
@@ -203,6 +203,7 @@ function M.setup()
 				"williamboman/nvim-lsp-installer",
 				"ray-x/lsp_signature.nvim",
 				"folke/lua-dev.nvim",
+        "jose-elias-alvarez/null-ls.nvim",
 			},
 		}
 
