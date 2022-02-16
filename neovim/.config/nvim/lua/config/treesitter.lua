@@ -18,7 +18,7 @@ function M.setup()
     },
 
 		indent = {
-			enable = true,
+			enable = false,
 		},
   }
 end

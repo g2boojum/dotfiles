@@ -60,12 +60,16 @@ capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities) -- for 
 
 local opts = {
   on_attach = on_attach,
+  capabilities = capabilities,
   flags = {
     debounce_text_changes = 150,
   },
 }
 
 function M.setup()
+  -- null-ls
+  require("config.lsp.null-ls").setup(opts)
+  -- Installer
   require("config.lsp.installer").setup(servers, opts)
 end
 
