@@ -85,7 +85,6 @@ function M.setup()
       lualine_c = {
         { separator },
         { lsp_client, icon = " ", color = { fg = colors.violet, gui = "bold" } },
-        -- { lsp_progress },
         {
           gps.get_location,
           cond = gps.is_available,

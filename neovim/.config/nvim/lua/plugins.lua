@@ -172,23 +172,6 @@ function M.setup()
 			disable = false,
 		}
 
-	  -- coq.nvim for completions
-    use {
-      "ms-jpq/coq_nvim",
-      branch = "coq",
-      event = "InsertEnter",
-      opt = true,
-      run = ":COQdeps",
-      config = function()
-        require("config.coq").setup()
-      end,
-      requires = {
-        { "ms-jpq/coq.artifacts", branch = "artifacts" },
-        { "ms-jpq/coq.thirdparty", branch = "3p", module = "coq_3p" },
-      },
-      disable = true,
-    }
-
 
 		-- LSP
 		use {
@@ -227,6 +210,16 @@ function M.setup()
 				require("config.marks").setup()
 			end,
 		}
+
+    -- Go
+    use {
+      "ray-x/go.nvim",
+      ft = { "go" },
+      config = function()
+        require("go").setup()
+      end,
+      disable = true,
+    }
 
 		-- my code formatters
 		use { "g2boojum/vim-mcnp" }
