@@ -1,7 +1,17 @@
 local M = {}
 
 local servers = {
-  gopls = {},
+  gopls = {
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+          shadow = true,
+        },
+        staticcheck = true,
+      },
+    },
+  },
   html = {},
   jsonls = {},
   pyright = {},
@@ -27,11 +37,11 @@ local servers = {
           },
         },
       },
-		},
-	},
+    },
+  },
   tsserver = {},
   vimls = {},
-	clangd = {},
+  clangd = {},
 }
 
 local lsp_signature = require "lsp_signature"
@@ -53,6 +63,8 @@ local function on_attach(client, bufnr)
 
   -- Configure key mappings
   require("config.lsp.keymaps").setup(client, bufnr)
+  -- Configure formatting
+  require("config.lsp.null-ls.formatters").setup(client, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -65,6 +77,9 @@ local opts = {
     debounce_text_changes = 150,
   },
 }
+
+-- Setup LSP handlers
+require("config.lsp.handlers").setup()
 
 function M.setup()
   -- null-ls

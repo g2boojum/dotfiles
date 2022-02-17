@@ -10,32 +10,32 @@ local with_diagnostics_code = function(builtin)
   }
 end
 
-local with_root_file = function(builtin, file)
-  return builtin.with {
-    condition = function(utils)
-      return utils.root_has_file(file)
-    end,
-  }
-end
+--local with_root_file = function(builtin, file)
+--  return builtin.with {
+--    condition = function(utils)
+--      return utils.root_has_file(file)
+--    end,
+--  }
+--end
 
 local sources = {
   -- formatting
   b.formatting.prettierd,
   b.formatting.shfmt,
   b.formatting.gofmt,
+  b.formatting.stylua,
   b.formatting.black.with { extra_args = { "--fast" } },
   -- b.formatting.isort,
-  -- with_root_file(b.formatting.stylua, "stylua.toml"),
 
   -- diagnostics
   b.diagnostics.write_good,
   -- b.diagnostics.markdownlint,
   -- b.diagnostics.eslint_d,
   b.diagnostics.flake8,
-  b.diagnostics.staticcheck, -- go linter
+  -- b.diagnostics.staticcheck, -- go linter, but auto-called from gopls
   -- b.diagnostics.tsc,
-  -- with_root_file(b.diagnostics.selene, "selene.toml"),
-  -- with_diagnostics_code(b.diagnostics.shellcheck),
+  b.diagnostics.selene,
+  with_diagnostics_code(b.diagnostics.shellcheck),
 
   -- code actions
   -- b.code_actions.gitsigns,

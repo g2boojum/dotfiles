@@ -104,7 +104,5 @@ opt.termguicolors = true
 --vim.g.neon_style = "light"
 --vim.cmd [[colorscheme neon]]
 
-require("github-theme").setup( {
-  theme_style = "light",
-})
+--github-theme setup in after/plugins/default.lua
 
