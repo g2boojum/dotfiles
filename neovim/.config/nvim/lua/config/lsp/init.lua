@@ -43,7 +43,9 @@ local servers = {
   vimls = {},
   clangd = {}, -- C and C++
   cmake = {},
-  texlab = {},
+  texlab = {
+    filetypes = { "tex", "bib", "plaintex" },
+  },
   clojure_lsp = {},
   fortls = {}, -- fortran
   hls = {}, -- haskell
