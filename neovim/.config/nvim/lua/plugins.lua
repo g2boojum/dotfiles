@@ -1,4 +1,4 @@
- local M = {}
+local M = {}
 
 function M.setup()
   -- Indicate first time installation
@@ -54,57 +54,65 @@ function M.setup()
     use {
       "folke/twilight.nvim",
       config = function()
-         require("twilight").setup {}
+        require("twilight").setup {}
       end,
     }
 
+    -- Better comments
+    use {
+      "numToStr/Comment.nvim",
+      opt = true,
+      config = function()
+        require("Comment").setup {}
+      end,
+    }
 
-		-- Better comments
-		use {
-			"numToStr/Comment.nvim",
-			opt = true,
-			config = function()
-				require("Comment").setup {}
-			end,
-		}
+    -- treesitter
+    use {
+      "nvim-treesitter/nvim-treesitter",
+      run = ":TSUpdate",
+      config = function()
+        require("config.treesitter").setup()
+      end,
+    }
 
-		-- treesitter
-		use {
-			"nvim-treesitter/nvim-treesitter",
-			run = ":TSUpdate",
-			config = function()
-				require("config.treesitter").setup()
-			end,
-		}
+    -- Git
+    use {
+      "TimUntersberger/neogit",
+      cmd = "Neogit",
+      requires = "nvim-lua/plenary.nvim",
+      config = function()
+        require("config.neogit").setup()
+      end,
+    }
+    use {
+      "lewis6991/gitsigns.nvim",
+      requires = {
+        "nvim-lua/plenary.nvim",
+      },
+      config = function()
+        require("gitsigns").setup()
+      end,
+    }
 
-		-- Git
-		use {
-			"TimUntersberger/neogit",
-			cmd = "Neogit",
-			requires = "nvim-lua/plenary.nvim",
-			config = function()
-				require("config.neogit").setup()
-			end,
-		}
+    -- WhichKey
+    use {
+      "folke/which-key.nvim",
+      config = function()
+        require("config.whichkey").setup()
+      end,
+    }
 
-		-- WhichKey
-		use {
-			"folke/which-key.nvim",
-			config = function()
-				require("config.whichkey").setup()
-			end,
-		}
+    -- IndentLine
+    use {
+      "lukas-reineke/indent-blankline.nvim",
+      config = function()
+        require("config.indentblankline").setup()
+      end,
+    }
 
-		-- IndentLine
-		use {
-			"lukas-reineke/indent-blankline.nvim",
-			config = function()
-				require("config.indentblankline").setup()
-			end,
-		}
-
-		-- better icons
-   use {
+    -- better icons
+    use {
       "kyazdani42/nvim-web-devicons",
       module = "nvim-web-devicons",
       config = function()
@@ -112,104 +120,113 @@ function M.setup()
       end,
     }
 
-		-- nvim-gps
-		use {
-			"SmiteshP/nvim-gps",
-			requires = "nvim-treesitter/nvim-treesitter",
-			module = "nvim-gps",
-			config = function()
-				require("nvim-gps").setup()
-			end,
-		}
+    -- nvim-gps
+    use {
+      "SmiteshP/nvim-gps",
+      requires = "nvim-treesitter/nvim-treesitter",
+      module = "nvim-gps",
+      config = function()
+        require("nvim-gps").setup()
+      end,
+    }
 
-		-- lualine
-		use {
-			"nvim-lualine/lualine.nvim",
-			event = "VimEnter",
-			config = function()
-				require("config.lualine").setup()
-			end,
-			requires = { "nvim-web-devicons" },
-		}
+    -- lualine
+    use {
+      "nvim-lualine/lualine.nvim",
+      event = "VimEnter",
+      config = function()
+        require("config.lualine").setup()
+      end,
+      requires = { "nvim-web-devicons" },
+    }
 
-		-- bufferline
-		use {
-			"akinsho/nvim-bufferline.lua",
-			event = "BufReadPre",
-			wants = "nvim-web-devicons",
-			config = function()
-				require("config.bufferline").setup()
-			end,
-		}
+    -- bufferline
+    use {
+      "akinsho/nvim-bufferline.lua",
+      event = "BufReadPre",
+      wants = "nvim-web-devicons",
+      config = function()
+        require("config.bufferline").setup()
+      end,
+    }
 
-		-- nvim-tree
-		use {
-			"kyazdani42/nvim-tree.lua",
-			requires = { "kyazdani42/nvim-web-devicons", },
-			cmd = { "NvimTreeToggle", "NvimTreeClose" },
-			config = function()
-				require("config.nvimtree").setup()
-			end,
-		}
+    -- nvim-tree
+    use {
+      "kyazdani42/nvim-tree.lua",
+      requires = { "kyazdani42/nvim-web-devicons" },
+      cmd = { "NvimTreeToggle", "NvimTreeClose" },
+      config = function()
+        require("config.nvimtree").setup()
+      end,
+    }
 
-		-- lightspeed for motions
-		use {
-			"ggandor/lightspeed.nvim",
-		}
+    -- lightspeed for motions
+    use {
+      "ggandor/lightspeed.nvim",
+    }
 
-		-- nvim-cmp for completions
-		use {
-			"hrsh7th/nvim-cmp",
-			config = function()
-				require("config.cmp").setup()
-			end,
-			requires = {
-				"hrsh7th/cmp-nvim-lsp",
-				"hrsh7th/cmp-buffer",
-				"hrsh7th/cmp-path",
-				"hrsh7th/cmp-cmdline",
-			},
-			disable = false,
-		}
+    -- nvim-cmp for completions
+    use {
+      "hrsh7th/nvim-cmp",
+      config = function()
+        require("config.cmp").setup()
+      end,
+      requires = {
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-path",
+        "hrsh7th/cmp-cmdline",
+      },
+      disable = false,
+    }
 
-
-		-- LSP
-		use {
-			"neovim/nvim-lspconfig",
-			opt = true,
-			event = "BufReadPre",
-			wants = { "nvim-lsp-installer", "lsp_signature.nvim", "lua-dev.nvim", "null-ls.nvim" },
-			config = function()
-				require("config.lsp").setup()
-			end,
-			requires = {
-				"williamboman/nvim-lsp-installer",
-				"ray-x/lsp_signature.nvim",
-				"folke/lua-dev.nvim",
+    -- LSP
+    use {
+      "neovim/nvim-lspconfig",
+      opt = true,
+      event = "BufReadPre",
+      wants = { "nvim-lsp-installer", "lsp_signature.nvim", "lua-dev.nvim", "null-ls.nvim" },
+      config = function()
+        require("config.lsp").setup()
+      end,
+      requires = {
+        "williamboman/nvim-lsp-installer",
+        "ray-x/lsp_signature.nvim",
+        "folke/lua-dev.nvim",
         "jose-elias-alvarez/null-ls.nvim",
-			},
-		}
+      },
+    }
 
-		-- trouble.nvim
-		use {
-			"folke/trouble.nvim",
-			event = "BufReadPre",
-			wants = "nvim-web-devicons",
-			cmd = { "TroubleToggle", "Trouble" },
-			config = function()
-				require("trouble").setup {
-					use_diagnostic_signs = true,
-				}
-			end,
-		}
+    -- DAP (debugging)
+    use { "mfussenegger/nvim-dap" }
+    use {
+      "leoluz/nvim-dap-go",
+      ft = { "go" },
+      config = function()
+        require("dap-go").setup()
+      end,
+    }
 
-		-- marks
-		use {
-			"chentau/marks.nvim",
-			config = function()
-				require("config.marks").setup()
-			end,
-		}
+    -- trouble.nvim
+    use {
+      "folke/trouble.nvim",
+      event = "BufReadPre",
+      wants = "nvim-web-devicons",
+      cmd = { "TroubleToggle", "Trouble" },
+      config = function()
+        require("trouble").setup {
+          use_diagnostic_signs = true,
+        }
+      end,
+    }
+
+    -- marks
+    use {
+      "chentau/marks.nvim",
+      config = function()
+        require("config.marks").setup()
+      end,
+    }
 
     -- Go
     use {
@@ -221,18 +238,16 @@ function M.setup()
       disable = true,
     }
 
-		-- my code formatters
-		use { "g2boojum/vim-mcnp" }
-		use { "g2boojum/vim-pweave" }
-		use { "g2boojum/vim-sweave-rst" }
-
+    -- my code formatters
+    use { "g2boojum/vim-mcnp" }
+    use { "g2boojum/vim-pweave" }
+    use { "g2boojum/vim-sweave-rst" }
 
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
       require("packer").sync()
     end
   end
-
 
   packer_init()
 

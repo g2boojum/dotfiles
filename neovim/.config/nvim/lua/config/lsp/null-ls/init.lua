@@ -10,20 +10,16 @@ local with_diagnostics_code = function(builtin)
   }
 end
 
---local with_root_file = function(builtin, file)
---  return builtin.with {
---    condition = function(utils)
---      return utils.root_has_file(file)
---    end,
---  }
---end
-
 local sources = {
   -- formatting
   b.formatting.prettierd,
   b.formatting.shfmt,
   b.formatting.gofmt,
-  b.formatting.stylua,
+  b.formatting.latexindent,
+  b.formatting.nimpretty,
+  b.formatting.stylua.with {
+    extra_args = { "--config-path", vim.fn.expand "~/.config/nvim/stylua.toml" },
+  },
   b.formatting.black.with { extra_args = { "--fast" } },
   -- b.formatting.isort,
 
@@ -34,11 +30,15 @@ local sources = {
   b.diagnostics.flake8,
   -- b.diagnostics.staticcheck, -- go linter, but auto-called from gopls
   -- b.diagnostics.tsc,
-  b.diagnostics.selene,
+  b.diagnostics.selene.with {
+    extra_args = { "--config", vim.fn.expand "~/.config/nvim/selene.toml" },
+  },
+  b.diagnostics.ansiblelint,
+  b.diagnostics.chktex,
   with_diagnostics_code(b.diagnostics.shellcheck),
 
   -- code actions
-  -- b.code_actions.gitsigns,
+  b.code_actions.gitsigns,
   -- b.code_actions.gitrebase,
 
   -- hover

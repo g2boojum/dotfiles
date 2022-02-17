@@ -14,7 +14,7 @@ local servers = {
   },
   html = {},
   jsonls = {},
-  pyright = {},
+  pyright = {}, -- python
   rust_analyzer = {},
   sumneko_lua = {
     settings = {
@@ -41,7 +41,14 @@ local servers = {
   },
   tsserver = {},
   vimls = {},
-  clangd = {},
+  clangd = {}, -- C and C++
+  cmake = {},
+  texlab = {},
+  clojure_lsp = {},
+  fortls = {}, -- fortran
+  hls = {}, -- haskell
+  bashls = {},
+  ansiblels = {},
 }
 
 local lsp_signature = require "lsp_signature"
