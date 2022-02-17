@@ -70,3 +70,5 @@ export PATH="$HOME/go/bin:$PATH"
 #cargo/rust
 . "$HOME/.cargo/env"
 
+# haskell
+[ -f "/home/grant/.ghcup/env" ] && source "/home/grant/.ghcup/env" # ghcup-env
