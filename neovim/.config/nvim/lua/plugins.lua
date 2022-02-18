@@ -207,6 +207,12 @@ function M.setup()
       end,
     }
 
+    -- vimtex
+    use {
+      "lervag/vimtex",
+      ft = { "tex", "plaintex" },
+    }
+
     -- trouble.nvim
     use {
       "folke/trouble.nvim",
