@@ -198,7 +198,12 @@ function M.setup()
     }
 
     -- DAP (debugging)
-    use { "mfussenegger/nvim-dap" }
+    use {
+      "mfussenegger/nvim-dap",
+      config = function()
+        require("config.dap").setup()
+      end,
+    }
     use {
       "leoluz/nvim-dap-go",
       ft = { "go" },
@@ -206,6 +211,7 @@ function M.setup()
         require("dap-go").setup()
       end,
     }
+    use { "theHamsta/nvim-dap-virtual-text" }
 
     -- vimtex
     use {
