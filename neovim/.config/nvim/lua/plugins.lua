@@ -176,6 +176,15 @@ function M.setup()
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-cmdline",
+        {
+          "L3MON4D3/LuaSnip",
+          wants = "friendly-snippets",
+          config = function()
+            require("config.luasnip").setup()
+          end,
+        },
+        "saadparwaiz1/cmp_luasnip",
+        "rafamadriz/friendly-snippets",
       },
       disable = false,
     }
