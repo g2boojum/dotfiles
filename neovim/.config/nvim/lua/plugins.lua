@@ -50,6 +50,7 @@ function M.setup()
     use { "EdenEast/nightfox.nvim" }
     use { "projekt0n/github-nvim-theme" }
     use { "rafamadriz/neon" }
+    use { "pappasam/papercolor-theme-slim" }
 
     use {
       "folke/twilight.nvim",
