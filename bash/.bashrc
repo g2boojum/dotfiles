@@ -71,3 +71,7 @@ export PATH="$HOME/go/bin:$PATH"
 
 # haskell
 [ -f "/home/grant/.ghcup/env" ] && source "/home/grant/.ghcup/env" # ghcup-env
+
+# clojure
+[ -d "$HOME/progs/clojure" ] && export PATH="$HOME/progs/clojure/bin:$PATH"
+[ -d "$HOME/progs/clojure" ] && export MANPATH="$HOME/progs/clojure/share/man:$MANPATH"

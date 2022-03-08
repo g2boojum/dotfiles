@@ -265,6 +265,11 @@ function M.setup()
       disable = true,
     }
 
+    -- Clojure
+    use { "clojure-vim/vim-jack-in" }
+    use { "radenling/vim-dispatch-neovim" }
+    use { "Olical/conjure" }
+
     -- my code formatters
     use { "g2boojum/vim-mcnp" }
     use { "g2boojum/vim-pweave" }
