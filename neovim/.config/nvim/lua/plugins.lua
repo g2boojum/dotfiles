@@ -265,6 +265,9 @@ function M.setup()
       disable = true,
     }
 
+    -- need dispatch.vim for vim-jack-in
+    use { "tpope/vim-dispatch" }
+
     -- Clojure
     use { "clojure-vim/vim-jack-in" }
     use { "radenling/vim-dispatch-neovim" }
