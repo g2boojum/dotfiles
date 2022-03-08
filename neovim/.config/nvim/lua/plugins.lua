@@ -37,12 +37,7 @@ function M.setup()
     use { "wbthomason/packer.nvim" }
 
     -- Colorscheme
-    use {
-      "sainnhe/everforest",
-      -- config = function()
-      --   vim.cmd "colorscheme everforest"
-      -- end,
-    }
+    use { "sainnhe/everforest" }
     use { "sainnhe/edge" }
     use { "marko-cerovac/material.nvim" }
     use { "ciaranm/inkpot" }
@@ -187,7 +182,17 @@ function M.setup()
         "saadparwaiz1/cmp_luasnip",
         "rafamadriz/friendly-snippets",
       },
-      disable = false,
+      disable = true,
+    }
+
+    -- vim-easycomplete for completion
+    use { "jayli/vim-easycomplete", disable = false }
+    use { "rafamadriz/friendly-snippets" }
+    use {
+      "L3MON4D3/LuaSnip",
+      config = function()
+        require("config.luasnip").setup()
+      end,
     }
 
     -- LSP
