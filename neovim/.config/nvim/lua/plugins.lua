@@ -71,6 +71,7 @@ function M.setup()
         require("config.treesitter").setup()
       end,
     }
+    use { "nvim-treesitter/nvim-treesitter-textobjects" }
 
     -- Git
     use {
