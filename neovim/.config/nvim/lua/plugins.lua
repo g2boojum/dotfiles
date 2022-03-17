@@ -186,13 +186,14 @@ function M.setup()
     }
 
     -- vim-easycomplete for completion
-    use { "jayli/vim-easycomplete", disable = false }
-    use { "rafamadriz/friendly-snippets" }
+    use { "jayli/vim-easycomplete", disable = true }
+    use { "rafamadriz/friendly-snippets", disable = true }
     use {
       "L3MON4D3/LuaSnip",
       config = function()
         require("config.luasnip").setup()
       end,
+      disable = true,
     }
 
     -- LSP
