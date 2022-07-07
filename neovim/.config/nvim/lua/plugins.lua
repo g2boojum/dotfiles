@@ -251,7 +251,7 @@ function M.setup()
 
     -- marks
     use {
-      "chentau/marks.nvim",
+      "chentoast/marks.nvim",
       config = function()
         require("config.marks").setup()
       end,

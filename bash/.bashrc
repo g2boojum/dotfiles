@@ -47,8 +47,8 @@ export PIP_FORMAT=columns
 
 export PS1='\[\033[01;32m\]\h \[\033[01;34m\]\W > \[\033[00m\]'
 
-# curl SSL stuff
-export CURL_CA_BUNDLE=/home/grant/certs/ca-bundle.crt
+# curl SSL stuff (Not necessary in Fedora)
+#export CURL_CA_BUNDLE=/home/grant/certs/ca-bundle.crt
 
 # julia
 export PATH="/home/grant/julia/julia-1.7.1/bin:$PATH"
