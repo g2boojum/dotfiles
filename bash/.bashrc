@@ -35,9 +35,9 @@ ISCDATA="/home/grant/RSICC/MCNP/MCNP6.2/MCNP_CODE/MCNP620/Utilities/ISC/data"
 ulimit -s unlimited
 
 # TeXLive stuff
-export PATH="/home/grant/progs/texlive/2021/bin/x86_64-linux:$PATH"
-export INFOPATH="/home/grant/progs/texlive/2021/texmf-dist/doc/info:$INFOPATH"
-export MANPATH="/home/grant/progs/texlive/2021/texmf-dist/doc/man:$MANPATH"
+export PATH="/home/grant/progs/texlive/2022/bin/x86_64-linux:$PATH"
+export INFOPATH="/home/grant/progs/texlive/2022/texmf-dist/doc/info:$INFOPATH"
+export MANPATH="/home/grant/progs/texlive/2022/texmf-dist/doc/man:$MANPATH"
 
 # zotero
 export PATH="$PATH:$HOME/progs/Zotero_linux-x86_64"
@@ -66,8 +66,16 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$HOME/progs/go/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 
+#java
+export PATH="$HOME/progs/temurin/jdk-17.0.7+7/bin:$PATH"
+
+#clojure
+export PATH="$HOME/progs/clojure/bin/:$PATH"
+
+
 #cargo/rust
-. "$HOME/.cargo/env"
+[ -f "/home/grant/.cargo" ] && source "$HOME/.cargo/env"
 
 # haskell
 [ -f "/home/grant/.ghcup/env" ] && source "/home/grant/.ghcup/env" # ghcup-env
+ulimit -s unlimited

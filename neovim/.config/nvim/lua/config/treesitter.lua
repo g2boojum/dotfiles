@@ -27,7 +27,10 @@ function M.setup()
       },
     },
 
-    indent = { enable = true },
+    indent = {
+      enable = true,
+      disable = { "python" }
+    },
 
     -- nvim-treesitter-textobjects
     textobjects = {
