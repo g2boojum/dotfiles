@@ -72,6 +72,8 @@ export PATH="$HOME/progs/temurin/jdk-17.0.7+7/bin:$PATH"
 #clojure
 export PATH="$HOME/progs/clojure/bin/:$PATH"
 
+#neovim
+export PATH="$HOME/progs/nvim/bin/:$PATH"
 
 #cargo/rust
 [ -f "/home/grant/.cargo" ] && source "$HOME/.cargo/env"
