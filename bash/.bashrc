@@ -81,3 +81,4 @@ export PATH="$HOME/progs/nvim/bin/:$PATH"
 # haskell
 [ -f "/home/grant/.ghcup/env" ] && source "/home/grant/.ghcup/env" # ghcup-env
 ulimit -s unlimited
+. "$HOME/.cargo/env"
