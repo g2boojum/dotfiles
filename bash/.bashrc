@@ -19,6 +19,7 @@ export EDITOR=nvim
 #aliases
 alias ls="ls -Fx --color"
 alias vim="nvim"
+alias wezterm="$HOME//progs/wezterm/target/release/wezterm"
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
@@ -72,6 +73,8 @@ export PATH="$HOME/progs/temurin/jdk-17.0.7+7/bin:$PATH"
 #clojure
 export PATH="$HOME/progs/clojure/bin/:$PATH"
 
+#nvim
+export PATH="$HOME/progs/nvim/bin/:$PATH"
 
 #cargo/rust
 [ -f "/home/grant/.cargo" ] && source "$HOME/.cargo/env"
@@ -79,3 +82,8 @@ export PATH="$HOME/progs/clojure/bin/:$PATH"
 # haskell
 [ -f "/home/grant/.ghcup/env" ] && source "/home/grant/.ghcup/env" # ghcup-env
 ulimit -s unlimited
+
+# condor
+. /opt/condor/condor.sh
+# MCNP 6.3.0 environment variables
+. "/home/grant/.config/mcnp/mcnp630.bash"
