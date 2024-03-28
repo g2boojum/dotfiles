@@ -48,7 +48,7 @@ export PIP_FORMAT=columns
 
 export PS1='\[\033[01;32m\]\h \[\033[01;34m\]\W > \[\033[00m\]'
 
-# curl SSL stuff (Not necessary in Fedora)
+# curl SSL stuff (Not necessary in Fedora or Ubuntu)
 #export CURL_CA_BUNDLE=/home/grant/certs/ca-bundle.crt
 
 # julia
@@ -62,6 +62,8 @@ export PATH="$PATH:$HOME/.nimble/bin:$HOME/nim/nim-1.6.2/bin"
 
 #rust
 export PATH="$PATH:$HOME/.cargo/bin"
+#cargo/rust
+[ -f "/home/grant/.cargo" ] && source "$HOME/.cargo/env"
 
 #go
 export PATH="$HOME/progs/go/bin:$PATH"
