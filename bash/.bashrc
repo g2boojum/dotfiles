@@ -26,13 +26,13 @@ alias vim="nvim"
 # User specific aliases and functions
 
 ##### MCNP6.2 stuff
-export PATH
-PATH="/home/grant/RSICC/MCNP/MCNP6.2/MCNP_CODE/bin:$PATH"
-export DATAPATH
-DATAPATH="/home/grant/RSICC/MCNP/MCNP6.2/MCNP_DATA"
-export ISCDATA
-ISCDATA="/home/grant/RSICC/MCNP/MCNP6.2/MCNP_CODE/MCNP620/Utilities/ISC/data"
-ulimit -s unlimited
+# export PATH
+# PATH="/home/grant/RSICC/MCNP/MCNP6.2/MCNP_CODE/bin:$PATH"
+# export DATAPATH
+# DATAPATH="/home/grant/RSICC/MCNP/MCNP6.2/MCNP_DATA"
+# export ISCDATA
+# ISCDATA="/home/grant/RSICC/MCNP/MCNP6.2/MCNP_CODE/MCNP620/Utilities/ISC/data"
+# ulimit -s unlimited
 
 # TeXLive stuff
 export PATH="/home/grant/progs/texlive/2022/bin/x86_64-linux:$PATH"
@@ -81,3 +81,5 @@ export PATH="$HOME/progs/nvim/bin/:$PATH"
 # haskell
 [ -f "/home/grant/.ghcup/env" ] && source "/home/grant/.ghcup/env" # ghcup-env
 ulimit -s unlimited
+# MCNP 6.3.0 environment variables
+. "/home/grant/.config/mcnp/mcnp630.bash"
