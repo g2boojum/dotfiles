@@ -726,15 +726,18 @@ require("lazy").setup({
 		--
 		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`
 		--'folke/tokyonight.nvim',
-		"projekt0n/github-nvim-theme",
+		-- "projekt0n/github-nvim-theme",
+		"catppuccin/nvim",
 		-- "uloco/bluloco.nvim",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
+		name = "catppuccin",
 		priority = 1000, -- make sure to load this before all the other start plugins
 		-- dependencies = { "rktjmp/lush.nvim" },  -- for bluloco
 		config = function()
 			-- Load the colorscheme here
 			--vim.cmd.colorscheme 'tokyonight-night'
-			vim.cmd.colorscheme("github_dark")
+			-- vim.cmd.colorscheme("github_dark")
+			vim.cmd.colorscheme("catppuccin")
 			-- vim.cmd.colorscheme("bluloco-light")
 
 			-- You can configure highlights by doing something like
