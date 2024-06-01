@@ -82,4 +82,4 @@ export PATH="$HOME/progs/nvim/bin/:$PATH"
 [ -f "/home/grant/.ghcup/env" ] && source "/home/grant/.ghcup/env" # ghcup-env
 ulimit -s unlimited
 # MCNP 6.3.0 environment variables
-. "/home/grant/.config/mcnp/mcnp630.bash"
+[ -f "/home/grant/.config/mcnp" ] && source "/home/grant/.config/mcnp/mcnp630.bash"
