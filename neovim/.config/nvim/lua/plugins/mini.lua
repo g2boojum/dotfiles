@@ -20,6 +20,7 @@ return { -- Collection of various small independent plugins/modules
 		require("mini.diff").setup({ view = { signs = { add = "+", change = "~", delete = "_" } } })
 		require("mini.git").setup()
 		require("mini.indentscope").setup()
+		require("mini.tabline").setup()
 
 		-- Simple and easy statusline.
 		--  You could remove this setup call if you don't like it,
