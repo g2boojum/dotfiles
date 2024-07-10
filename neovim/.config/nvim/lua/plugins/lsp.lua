@@ -133,7 +133,21 @@ return { -- LSP Configuration & Plugins
 		local servers = {
 			-- clangd = {},
 			gopls = {},
-			pyright = {},
+			ruff = {},
+			pyright = {
+				settings = {
+			          pyright = {
+			            -- Using Ruff's import organizer
+			            disableOrganizeImports = true,
+			          },
+			          python = {
+			            analysis = {
+			              -- Ignore all files for analysis to use only Ruff for linting
+			              ignore = { '*' },
+			            },
+			          },
+			      },
+			},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
