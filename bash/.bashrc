@@ -19,6 +19,8 @@ export EDITOR=nvim
 #aliases
 alias ls="ls -Fx --color"
 alias vim="nvim"
+alias nvim-kick='NVIM_APPNAME="nvim-kick" nvim'
+alias nvim-lazy='NVIM_APPNAME="nvim-lazy" nvim'
 alias wezterm="$HOME//progs/wezterm/target/release/wezterm"
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
