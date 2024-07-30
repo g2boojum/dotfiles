@@ -88,3 +88,7 @@ export PATH="$HOME/progs/nvim/bin/:$PATH"
 ulimit -s unlimited
 # MCNP 6.3.0 environment variables
 [ -f "/home/grant/.config/mcnp" ] && source "/home/grant/.config/mcnp/mcnp630.bash"
+
+if [[ $(tty) == *"pts"* ]]; then
+    [ -x "$(command -v fastfetch)" ] && fastfetch
+fi
