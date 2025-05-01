@@ -89,6 +89,10 @@ ulimit -s unlimited
 # MCNP 6.3.0 environment variables
 [ -f "/home/grant/.config/mcnp" ] && source "/home/grant/.config/mcnp/mcnp630.bash"
 
+#stan
+export PATH="$HOME/sources/cmdstan/bin:$PATH"
+export CMDSTAN="$HOME/sources/cmdstan"
+
 if [[ $(tty) == *"pts"* ]]; then
     [ -x "$(command -v fastfetch)" ] && fastfetch
 fi
